@@ -1,12 +1,23 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-[#1e3a5f] text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="text-center sm:text-left">
-            <h1 className="text-xl sm:text-2xl font-bold">D-Rocks Dynamic Drywall Repair</h1>
-            <p className="text-sm text-gray-300">LLC - Licensed & Insured</p>
+          <div className="flex items-center gap-4">
+            <Image
+              src="/logo.jpg"
+              alt="D-Rocks Dynamic Drywall Repair Logo"
+              width={60}
+              height={60}
+              className="rounded"
+            />
+            <div className="text-center sm:text-left">
+              <h1 className="text-xl sm:text-2xl font-bold">D-Rocks Dynamic Drywall Repair</h1>
+              <p className="text-sm text-gray-300">LLC - Licensed & Insured</p>
+            </div>
           </div>
           <a
             href="tel:973-552-8051"
@@ -20,6 +31,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#1e3a5f] to-[#2d4a6f] text-white py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
+          <Image
+            src="/logo.jpg"
+            alt="D-Rocks Dynamic Drywall Repair"
+            width={200}
+            height={200}
+            className="mx-auto mb-8 rounded-lg"
+          />
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             Clean. Honest. Experienced.
           </h2>
@@ -84,8 +102,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Work Gallery Section */}
+      <section id="gallery" className="py-16 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#1e3a5f] mb-4">
+            Our Work
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            From demolition to flawless finish - see the D-Rocks difference
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <GalleryImage
+              src="/work-finished-1.jpg"
+              alt="Finished room with clean drywall and fresh paint"
+              label="Finished Result"
+            />
+            <GalleryImage
+              src="/work-finished-2.jpg"
+              alt="Completed hallway with smooth walls"
+              label="Hallway Renovation"
+            />
+            <GalleryImage
+              src="/work-finished-3.jpg"
+              alt="Room with freshly finished walls"
+              label="Room Complete"
+            />
+            <GalleryImage
+              src="/work-progress-1.jpg"
+              alt="Drywall finishing in progress"
+              label="Finishing Work"
+            />
+            <GalleryImage
+              src="/work-progress-2.jpg"
+              alt="Fresh drywall installation"
+              label="New Drywall"
+            />
+            <GalleryImage
+              src="/work-before-2.jpg"
+              alt="Before renovation - exposed walls"
+              label="Before"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#1e3a5f] mb-12">
             Why Choose D-Rocks?
@@ -168,6 +230,13 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#1a1a2e] text-white py-8 px-6">
         <div className="max-w-6xl mx-auto text-center">
+          <Image
+            src="/logo.jpg"
+            alt="D-Rocks Dynamic Drywall Repair"
+            width={80}
+            height={80}
+            className="mx-auto mb-4 rounded"
+          />
           <p className="font-bold text-lg mb-2">D-Rocks Dynamic Drywall Repair LLC</p>
           <p className="text-gray-400 mb-4">Licensed & Insured | Sussex County, NJ</p>
           <p className="text-gray-500 text-sm">
@@ -221,6 +290,31 @@ function FeatureCard({
       </div>
       <h3 className="text-xl font-bold text-[#1e3a5f] mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function GalleryImage({
+  src,
+  alt,
+  label,
+}: {
+  src: string;
+  alt: string;
+  label: string;
+}) {
+  return (
+    <div className="relative group overflow-hidden rounded-xl shadow-lg">
+      <Image
+        src={src}
+        alt={alt}
+        width={400}
+        height={300}
+        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+      />
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+        <p className="text-white font-semibold">{label}</p>
+      </div>
     </div>
   );
 }
