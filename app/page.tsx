@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-[#1e3a5f] text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
+      <header className="bg-[#111111] text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-4">
             <Image
@@ -21,7 +21,7 @@ export default function Home() {
           </div>
           <a
             href="tel:973-552-8051"
-            className="bg-[#d4a853] hover:bg-[#c49843] text-[#1e3a5f] font-bold py-2 px-6 rounded-lg transition-colors"
+            className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-bold py-2 px-6 rounded-lg transition-colors"
           >
             Call: 973-552-8051
           </a>
@@ -29,7 +29,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#1e3a5f] to-[#2d4a6f] text-white py-20 px-6">
+      <section className="bg-gradient-to-br from-[#111111] to-[#222222] text-white py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <Image
             src="/logo.jpg"
@@ -44,19 +44,19 @@ export default function Home() {
           <p className="text-xl sm:text-2xl mb-4 text-gray-200">
             Top-tier drywall and carpentry results with respectful, meticulous work.
           </p>
-          <p className="text-lg mb-8 text-[#d4a853]">
+          <p className="text-lg mb-8 text-gray-300">
             Proudly serving Sussex County, NJ
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:973-552-8051"
-              className="bg-[#d4a853] hover:bg-[#c49843] text-[#1e3a5f] font-bold py-4 px-8 rounded-lg text-lg transition-colors"
+              className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors"
             >
               Call or Text for Free Estimate
             </a>
             <a
               href="#services"
-              className="border-2 border-white hover:bg-white hover:text-[#1e3a5f] font-bold py-4 px-8 rounded-lg text-lg transition-colors"
+              className="border-2 border-white hover:bg-white hover:text-[#111111] font-bold py-4 px-8 rounded-lg text-lg transition-colors"
             >
               View Services
             </a>
@@ -67,36 +67,31 @@ export default function Home() {
       {/* Services Section */}
       <section id="services" className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#1e3a5f] mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#111111] mb-12">
             Our Services
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ServiceCard
               title="Drywall Installation"
               description="Complete drywall installation for new construction and renovations."
-              icon="🏗️"
             />
             <ServiceCard
               title="Drywall Finishing"
               description="Expert taping, mudding, and finishing for seamless walls."
-              icon="✨"
             />
             <ServiceCard
               title="Drywall Repairs"
               description="Specializing in clean, invisible drywall repairs of all sizes."
-              icon="🔧"
             />
             <ServiceCard
               title="Painting"
               description="Professional interior painting to complete your project."
-              icon="🎨"
             />
           </div>
           <div className="mt-8 max-w-md mx-auto">
             <ServiceCard
               title="Small/Medium Carpentry"
               description="Quality carpentry projects from a certified craftsman."
-              icon="🪚"
             />
           </div>
         </div>
@@ -105,42 +100,27 @@ export default function Home() {
       {/* Work Gallery Section */}
       <section id="gallery" className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#1e3a5f] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#111111] mb-4">
             Our Work
           </h2>
           <p className="text-center text-gray-600 mb-12">
             From demolition to flawless finish - see the D-Rocks difference
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <GalleryImage
-              src="/work-finished-1.jpg"
-              alt="Finished room with clean drywall and fresh paint"
-              label="Finished Result"
+          <div className="space-y-12">
+            <BeforeAfter
+              beforeSrc="/project1-before.jpg"
+              afterSrc="/project1-after.jpg"
+              title="Hallway Renovation"
             />
-            <GalleryImage
-              src="/work-finished-2.jpg"
-              alt="Completed hallway with smooth walls"
-              label="Hallway Renovation"
+            <BeforeAfter
+              beforeSrc="/project2-before.jpg"
+              afterSrc="/project2-after.jpg"
+              title="Entryway Restoration"
             />
-            <GalleryImage
-              src="/work-finished-3.jpg"
-              alt="Room with freshly finished walls"
-              label="Room Complete"
-            />
-            <GalleryImage
-              src="/work-progress-1.jpg"
-              alt="Drywall finishing in progress"
-              label="Finishing Work"
-            />
-            <GalleryImage
-              src="/work-progress-2.jpg"
-              alt="Fresh drywall installation"
-              label="New Drywall"
-            />
-            <GalleryImage
-              src="/work-before-2.jpg"
-              alt="Before renovation - exposed walls"
-              label="Before"
+            <BeforeAfter
+              beforeSrc="/project3-before.jpg"
+              afterSrc="/project3-after.jpg"
+              title="Room Transformation"
             />
           </div>
         </div>
@@ -149,7 +129,7 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#1e3a5f] mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#111111] mb-12">
             Why Choose D-Rocks?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -170,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-16 px-6 bg-[#1e3a5f] text-white">
+      <section className="py-16 px-6 bg-[#111111] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8">
             Meticulous Craftsmanship
@@ -181,7 +161,7 @@ export default function Home() {
             As a certified carpenter from Sussex County Vocational School,
             I approach every project with precision and pride.
           </p>
-          <p className="text-lg sm:text-xl leading-relaxed text-[#d4a853]">
+          <p className="text-lg sm:text-xl leading-relaxed text-gray-300">
             &ldquo;A very considerate and meticulous carpenter.&rdquo;
           </p>
         </div>
@@ -190,7 +170,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8">
             Get Your Free Estimate
           </h2>
           <p className="text-lg text-gray-600 mb-8">
@@ -199,36 +179,36 @@ export default function Home() {
           <div className="grid sm:grid-cols-3 gap-6 mb-8">
             <a
               href="tel:973-552-8051"
-              className="bg-[#1e3a5f] hover:bg-[#2d4a6f] text-white p-6 rounded-lg transition-colors"
+              className="bg-[#111111] hover:bg-[#222222] text-white p-6 rounded-lg transition-colors"
             >
               <div className="text-3xl mb-2">📞</div>
               <div className="font-bold text-lg">Call or Text</div>
-              <div className="text-[#d4a853]">973-552-8051</div>
+              <div className="text-gray-300">973-552-8051</div>
             </a>
             <a
               href="mailto:derrikg1@aol.com"
-              className="bg-[#1e3a5f] hover:bg-[#2d4a6f] text-white p-6 rounded-lg transition-colors"
+              className="bg-[#111111] hover:bg-[#222222] text-white p-6 rounded-lg transition-colors"
             >
               <div className="text-3xl mb-2">✉️</div>
               <div className="font-bold text-lg">Email</div>
-              <div className="text-[#d4a853] break-all">derrikg1@aol.com</div>
+              <div className="text-gray-300 break-all">derrikg1@aol.com</div>
             </a>
             <a
               href="https://www.facebook.com/profile.php?id=61555648498498"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#1e3a5f] hover:bg-[#2d4a6f] text-white p-6 rounded-lg transition-colors"
+              className="bg-[#111111] hover:bg-[#222222] text-white p-6 rounded-lg transition-colors"
             >
               <div className="text-3xl mb-2">📘</div>
               <div className="font-bold text-lg">Facebook</div>
-              <div className="text-[#d4a853]">Follow Us</div>
+              <div className="text-gray-300">Follow Us</div>
             </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1a1a2e] text-white py-8 px-6">
+      <footer className="bg-[#0a0a0a] text-white py-8 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <Image
             src="/logo.jpg"
@@ -251,16 +231,13 @@ export default function Home() {
 function ServiceCard({
   title,
   description,
-  icon,
 }: {
   title: string;
   description: string;
-  icon: string;
 }) {
   return (
     <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-[#1e3a5f] mb-2">{title}</h3>
+      <h3 className="text-xl font-bold text-[#111111] mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
@@ -275,9 +252,9 @@ function FeatureCard({
 }) {
   return (
     <div className="text-center p-6">
-      <div className="w-16 h-16 bg-[#d4a853] rounded-full flex items-center justify-center mx-auto mb-4">
+      <div className="w-16 h-16 bg-[#111111] rounded-full flex items-center justify-center mx-auto mb-4">
         <svg
-          className="w-8 h-8 text-[#1e3a5f]"
+          className="w-8 h-8 text-white"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -288,32 +265,49 @@ function FeatureCard({
           />
         </svg>
       </div>
-      <h3 className="text-xl font-bold text-[#1e3a5f] mb-2">{title}</h3>
+      <h3 className="text-xl font-bold text-[#111111] mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
 }
 
-function GalleryImage({
-  src,
-  alt,
-  label,
+function BeforeAfter({
+  beforeSrc,
+  afterSrc,
+  title,
 }: {
-  src: string;
-  alt: string;
-  label: string;
+  beforeSrc: string;
+  afterSrc: string;
+  title: string;
 }) {
   return (
-    <div className="relative group overflow-hidden rounded-xl shadow-lg">
-      <Image
-        src={src}
-        alt={alt}
-        width={400}
-        height={300}
-        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-      />
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-        <p className="text-white font-semibold">{label}</p>
+    <div>
+      <h3 className="text-xl font-bold text-[#111111] mb-4 text-center">{title}</h3>
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="relative">
+          <Image
+            src={beforeSrc}
+            alt={`${title} - Before`}
+            width={600}
+            height={400}
+            className="w-full h-72 object-cover rounded-xl shadow-lg"
+          />
+          <div className="absolute top-4 left-4 bg-[#111111] text-white px-3 py-1 rounded-full text-sm font-bold">
+            Before
+          </div>
+        </div>
+        <div className="relative">
+          <Image
+            src={afterSrc}
+            alt={`${title} - After`}
+            width={600}
+            height={400}
+            className="w-full h-72 object-cover rounded-xl shadow-lg"
+          />
+          <div className="absolute top-4 left-4 bg-[#2563eb] text-white px-3 py-1 rounded-full text-sm font-bold">
+            After
+          </div>
+        </div>
       </div>
     </div>
   );

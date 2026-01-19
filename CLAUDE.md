@@ -44,9 +44,9 @@ public/
 ```
 
 ## Color Scheme
-- Primary (navy): #1e3a5f
-- Secondary (gold): #d4a853
-- Dark: #1a1a2e
+- Primary (black): #111111
+- Accent (blue): #2563eb
+- Dark: #0a0a0a
 - Light: #f8f9fa
 
 ## Commands
